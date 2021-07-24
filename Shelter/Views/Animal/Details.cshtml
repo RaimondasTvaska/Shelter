@@ -1,0 +1,55 @@
+﻿@model AnimalModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>List</h1>
+
+<p>
+    <a asp-action="Index">List</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
+            <th>
+                Spieces
+            </th>
+            <th>
+                Name
+            </th>
+            <th>
+                Age
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tr>
+        <td>
+                @Html.DisplayFor(model => model.Id)
+            </td>
+        <td>
+            @Html.DisplayFor(model => model.Spieces)
+        </td>
+        <td>
+            @Html.DisplayFor(model => model.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(model => model.Age)
+        </td>
+        <td>
+                @Html.DisplayFor(model => model.Description)
+            </td>
+        @*<td>
+                @Html.DisplayFor(modelItem => item.Completed)
+            </td>*@
+        
+    </tr>
+
+</table>

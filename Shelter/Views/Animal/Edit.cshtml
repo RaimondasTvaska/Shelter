@@ -1,0 +1,29 @@
+﻿@model AnimalModel
+
+@{
+    ViewData["Title"] = "Update";
+}
+
+<h1>Edit</h1>
+
+@using (Html.BeginForm("Edit", "Animal", FormMethod.Post))
+{
+    <div class="container-full" style="background-color:aliceblue">
+        <div class="container">
+            @Html.LabelFor(x => x.Spieces)
+            @Html.TextBoxFor(x => x.Spieces)
+
+            @Html.LabelFor(x => x.Name)
+            @Html.TextBoxFor(x => x.Name)
+
+            @Html.LabelFor(x => x.Age)
+            @Html.TextBoxFor(x => x.Age)
+
+            @Html.LabelFor(x => x.Description)
+            @Html.TextBoxFor(x => x.Description)
+            <input type="submit" value="Update" />
+        </div>
+
+    </div>
+}
+
